@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CHILD_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>QS_RAID_Log__c.QS_Primary_Owner__c</field>
+    </columns>
+    <columns>
+        <field>QS_RAID_Log__c.QS_Due_Date__c</field>
+    </columns>
+    <columns>
+        <field>QS_RAID_Log__c.QS_Name__c</field>
+    </columns>
+    <columns>
+        <field>FK_$QS_Requirements__c.QS_Title__c</field>
+    </columns>
+    <columns>
+        <field>CHILD_CREATED_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <description>List of RAID items logged against Sprint 5 REQs</description>
+    <filter>
+        <criteriaItems>
+            <column>QS_RAID_Log__c.QS_Development_Cycle__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sprint 5</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>QS_RAID_Log__c.QS_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>,Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Legal,Finance</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Sprint 5 RAID Logs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$QS_Track__c$QS_RAID_Log__c@QS_RAID_Log__c.QS_Requirements__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>QS_Track__c.QS_Requirement_Cutoff_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

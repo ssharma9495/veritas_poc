@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>QS_Test_Scenario__c$QS_Requirement__c</field>
+    </columns>
+    <columns>
+        <field>QS_Test_Scenario__c$Name</field>
+    </columns>
+    <columns>
+        <field>QS_Test_Scenario__c.QS_Test_Results__r$Name</field>
+    </columns>
+    <columns>
+        <field>QS_Test_Scenario__c.QS_Test_Results__r$QS_Test_Result_Status__c</field>
+    </columns>
+    <columns>
+        <field>QS_Test_Scenario__c.QS_Test_Results__r$QS_Steps_to_Reproduce__c</field>
+    </columns>
+    <columns>
+        <field>QS_Test_Scenario__c.QS_Test_Results__r$QS_Comments__c</field>
+    </columns>
+    <columns>
+        <field>QS_Test_Scenario__c.QS_Test_Results__r$QS_Assigned_To__c</field>
+    </columns>
+    <columns>
+        <field>QS_Test_Scenario__c$QS_Test_Case_Action__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>QS_Test_Scenario__c$QS_Track__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Customer Support</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>veritas_Update test steps</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Test_Scenarios_with_Test_Results__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>QS_Test_Scenario__c.QS_Test_Results__r$QS_Test_Result_Status__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>QS_Test_Scenario__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

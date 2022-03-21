@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>QS_Requirements__c$QS_Development_Owner__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Test_Scenarios__r$Name</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>QS_Requirements__c$QS_Development_Sprint__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sprint 0,Sprint 1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>QS_Requirements__c.QS_Test_Scenarios__r$QS_Assigned_To__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Mary rose silaya,Etienne Buessler,Amy keuper,Francis Gopez,Kristoffer Lager,Lourdes Andreu,R-Jay Mendoza,Mary Rose Silaya,Danica Pedraja,Alicia Fisk,Niklas Bergh,Sylvie Valero,Brendan Cook,Mark Collins,Rebecca Lam,Josefin Bjornvik,Lee-Yan Marquez,James Resetco,Dave Roberts</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>QS_Requirements__c.QS_Test_Scenarios__r$QS_Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>QS_Requirements__c$QS_Development_Sprint__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>QS_Requirements__c.QS_Test_Scenarios__r$QS_Assigned_To__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>UAT status -Sprint 0 and Sprint 1</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Requirements_with_Test_Scenarios_with_Test_Results__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>QS_Requirements__c.QS_Test_Scenarios__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

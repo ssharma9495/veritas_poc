@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Area__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Title__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Process_Context__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Requirement_Details__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Assumptions__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Development_Owner__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>QS_Requirements__c.QS_Development_Sprint__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sprint 2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Finance</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>QS_Requirements__c.QS_Requirement_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Withdrawn,Post Go-Live</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>QS_Requirements__c.QS_Development_Team__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner 1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Sprint 2 REQ&#39;s</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$QS_Requirements__c@QS_Requirements__c.QS_Primary_Track__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>FK_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>QS_Requirements__c.QS_Dynamic_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

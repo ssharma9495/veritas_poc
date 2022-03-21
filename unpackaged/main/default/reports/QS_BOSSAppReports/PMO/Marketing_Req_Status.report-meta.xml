@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Requirement_Status__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_User_Story__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Process_Context__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Requirement_Details__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Assumptions__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Marketing</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Marketing Req Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$QS_Requirements__c@QS_Requirements__c.QS_Primary_Track__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>QS_Requirements__c.QS_Dynamic_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

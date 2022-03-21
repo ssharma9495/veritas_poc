@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Primary_Track__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Title__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Requirement_Details__c</field>
+    </columns>
+    <columns>
+        <field>QS_Requirements__c.QS_Business_Owner__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>QS_Related_Track__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Services</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>CUST_ID</primaryTableColumn>
+        <relatedTable>QS_Related_Track__c</relatedTable>
+        <relatedTableJoinColumn>QS_Requirement__c</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>USD</currency>
+    <format>Tabular</format>
+    <name>Services-Related REQs in Other Tracks</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityCustomEntity$QS_Requirements__c$QS_Related_Track__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
